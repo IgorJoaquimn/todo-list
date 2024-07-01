@@ -1,5 +1,12 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "@types/react": "^18.3.3"
+  },
+
+  "scripts": {
+    "start": "react-scripts start"
+  }
 }

@@ -1,10 +1,12 @@
+// src/App.tsx
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import TaskManagerPage from './Pages/TaskManagerPage/TaskManagerPage';
+import './App.css'; // Example CSS import (optional)
 
 function App() {
   return (
     <div className="App">
+      <TaskManagerPage />
     </div>
   );
 }
