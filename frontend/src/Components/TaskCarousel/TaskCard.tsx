@@ -12,7 +12,6 @@ const TaskCard = ({ task, onDeleteTask }) => {
   return (
     <div className="task-card">
       <p>{description}</p>
-      <p>{date}</p>
       <button onClick={handleDelete}>Delete</button>
     </div>
   );

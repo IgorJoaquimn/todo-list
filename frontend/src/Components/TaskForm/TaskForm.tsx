@@ -2,7 +2,13 @@
 import React, { useState } from 'react';
 import './TaskForm.css'; // Example CSS import (optional)
 
-const TaskForm = ({ onCreateTask }) => {
+interface TaskFormProps {
+  onCreateTask: (task: { description: string; date: string }) => void;
+}
+
+
+
+const TaskForm: React.FC<TaskFormProps> = ({ onCreateTask }) => {
   const [description, setDescription] = useState('');
   const [date, setDate] = useState('');
 

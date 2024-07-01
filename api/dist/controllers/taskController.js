@@ -1,5 +1,11 @@
 import fs from 'fs';
-const tasksFilePath = 'src/data/tasks.json';
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
+const __dirname = path.dirname(__filename); // get the name of the directory
+const tasksFilePath = process.env.NODE_ENV === 'test'
+    ? path.resolve('__tests__/test_tasks.json')
+    : path.resolve('data/tasks.json');
 // Helper function to read tasks from the JSON file
 const readTasks = () => {
     const data = fs.readFileSync(tasksFilePath, 'utf-8');
@@ -39,4 +45,5 @@ export const deleteTask = (req, res) => {
         res.status(404).send('Task not found');
     }
 };
+export { readTasks, writeTasks };
 //# sourceMappingURL=taskController.js.map

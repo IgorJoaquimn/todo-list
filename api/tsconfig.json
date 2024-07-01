@@ -5,7 +5,15 @@
       "target": "ES2020",
       "sourceMap": true,
       "outDir": "./dist",
-      // "allowImportingTsExtensions": true,
+
+      "baseUrl": "./src", // Set base URL to 'src' directory
+      "paths": {
+        "@models/*": ["models/*"],
+        "@controllers/*": ["controllers/*"],
+        "@utils/*": ["utils/*"],
+        "@data/*": ["../data/*"] // Adjusted path to point outside 'src'
+      },
+
       "strict": true,
       "esModuleInterop": true,
       "skipLibCheck": true,

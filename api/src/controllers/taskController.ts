@@ -1,11 +1,16 @@
 import { Request, Response } from 'express';
 import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { Task } from '../models/task.js';
+
+const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
+const __dirname = path.dirname(__filename); // get the name of the directory
 
 const tasksFilePath =
   process.env.NODE_ENV === 'test'
-    ? '__tests__/test_tasks.json' // Test environment file path
-    : 'data/tasks.json'; // Production environment file path
+    ? path.resolve('__tests__/test_tasks.json')
+    : path.resolve('data/tasks.json');
 
 // Helper function to read tasks from the JSON file
 const readTasks = (): Task[] => {
