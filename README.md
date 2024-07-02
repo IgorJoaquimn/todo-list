@@ -1,6 +1,7 @@
 # todo-list
 
 Este é um aplicativo de lista de tarefas desenvolvido com React.
+![alt text](image.png)
 
 ## Tecnologias Utilizadas
 
@@ -109,3 +110,4 @@ De maneira similar, a estrutura dos diretórios também foi pensada de forma a e
 - **app.js**: Configuração e inicialização da aplicação Express.
 
 Por fim, como os dados fluem de maneira previsível e encapsulada pelos componentes, POO não foi necessário.
+
