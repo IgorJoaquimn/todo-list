@@ -8,18 +8,15 @@
 
 .task-group {
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.8);
-  /* Background color with transparency */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Drop shadow */
-  border-radius: 8px;
-  /* Rounded corners */
-  padding: 15px;
-  /* Padding inside the group */
+  background-color: rgba(255, 255, 255, 0.8); /* Background color with transparency */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Padding inside the group */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Smooth transitions */
 }
 
 .task-group:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 4px 8px rgba(68, 8, 100, 0.95);
   color: rgb(68, 8, 100);
@@ -34,4 +31,36 @@
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .task-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .task-group {
+    padding: 10px;
+  }
+
+  .task-group-items {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .task-group {
+    padding: 5px;
+  }
+
+  .task-card {
+    padding: 5px;
+  }
+
+  .task-card button {
+    font-size: 14px;
+  }
 }
