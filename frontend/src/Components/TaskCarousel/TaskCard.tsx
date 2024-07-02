@@ -1,8 +1,14 @@
-// src/Components/TaskCarousel/TaskCard.jsx
 import React from 'react';
 import './TaskCard.css'; // Example CSS import (optional)
+import  Task  from '@custom_types/Task'; // Adjust path as per your project
 
-const TaskCard = ({ task, onDeleteTask }) => {
+
+interface TaskCardProps {
+  task: Task;
+  onDeleteTask: (id: number) => void;
+}
+
+const TaskCard: React.FC<TaskCardProps> = ({ task, onDeleteTask }) => {
   const { id, description, date } = task;
 
   const handleDelete = () => {
@@ -12,7 +18,9 @@ const TaskCard = ({ task, onDeleteTask }) => {
   return (
     <div className="task-card">
       <p>{description}</p>
-      <button onClick={handleDelete}>Delete</button>
+      <button className="delete-button" onClick={handleDelete}>
+        X
+      </button>
     </div>
   );
 };

@@ -11,6 +11,10 @@ export function groupTasksByDate(tasks: Task[]): { [key: string]: Task[] } {
     groupedTasks[dateKey].push(task);
   });
 
+  Object.keys(groupedTasks).forEach(date => {
+    groupedTasks[date] = sortTasksByDate(groupedTasks[date]);
+  });
+
   return groupedTasks;
 }
 

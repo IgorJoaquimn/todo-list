@@ -1,23 +1,10 @@
 {
-  "compilerOptions": {
-      "module": "ESNext",
-      "moduleResolution": "Bundler",
+    "compilerOptions": {
+      "module": "NodeNext",
+      "moduleResolution": "NodeNext",
       "target": "ES2020",
       "sourceMap": true,
-      "outDir": "./dist",
-
-      "baseUrl": "./src", // Set base URL to 'src' directory
-      "paths": {
-        "@models/*": ["models/*"],
-        "@controllers/*": ["controllers/*"],
-        "@utils/*": ["utils/*"],
-        "@data/*": ["../data/*"] // Adjusted path to point outside 'src'
-      },
-
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true
-  },
-  "include": ["src/**/*.ts"],
-}
+      "outDir": "dist",
+    },
+    "include": ["src/**/*"],
+  }

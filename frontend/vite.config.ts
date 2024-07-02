@@ -10,10 +10,13 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
+      "@": path.resolve(__dirname, "./src"),
       '@components': path.resolve(__dirname, './src/Components'),
       '@pages': path.resolve(__dirname, './src/Pages'),
       '@store': path.resolve(__dirname, './src/store'),
       '@reducers': path.resolve(__dirname, './src/reducers'),
+      '@custom_types': path.resolve(__dirname, './src/types'),
+      '@hooks': path.resolve(__dirname, './src/hooks'),
     },
   },
 });

@@ -1,0 +1,66 @@
+.task-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding:2rem 3rem 3rem;
+}
+
+.task-form {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    /* No space between items */
+}
+
+.task-form input,
+.task-form button {
+    padding: 10px;
+    margin: 0;
+    height: 40px;
+    border: 1px solid #ccc;
+    /* Thinner borders */
+    box-sizing: border-box;
+}
+
+.task-form input#taskDate {
+    border-left: none;
+    /* Remove left border for the date input */
+}
+
+.task-form label {
+    display: none;
+    /* Hide the labels to maintain accessibility */
+}
+
+.task-form button {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.task-form button:hover,
+.task-form button:focus {
+    transform: scale(1.1);
+    background-color: purple;
+}
+
+.task-form button:focus {
+    outline: 2px solid #000;
+}
+
+@media (max-width: 600px) {
+    .task-form {
+        flex-direction: column;
+    }
+
+    .task-form input,
+    .task-form button {
+        height: auto;
+        width: 100%;
+        /* Full width for mobile */
+    }
+}

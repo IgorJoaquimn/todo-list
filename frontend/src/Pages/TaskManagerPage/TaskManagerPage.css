@@ -1,0 +1,26 @@
+#todoist {
+    margin:4rem auto;
+    margin-bottom: 0.2rem;
+	padding:2rem 3rem 3rem;
+	max-width:500px;
+}
+#todoist h1 {
+    /*text-align:center;*/
+    font-weight:normal;
+    font-size:2.6rem;
+    letter-spacing:0.05em;
+    border-bottom:1px solid rgba(255,255,255,.3); 
+    text-align: left;
+}
+
+#todoist h1:hover {
+    color: purple;
+}
+
+#todoist h1 span {
+	display:block;
+	font-size:0.8rem;
+	margin-bottom:0.7rem;
+	margin-left:3px;
+	margin-top:0.2rem;   
+}
