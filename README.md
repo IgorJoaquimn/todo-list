@@ -69,7 +69,7 @@ Assim, o servidor estará executando em `http://localhost:3000`
     ```bash
     npm dev
 
-O aplicativo estará disponível em `http://localhost:` na porta que o programa escolher.
+O aplicativo estará disponível em `http://localhost:` na porta apontada no terminal.
 
 ## Premissas assumidas
 No que tange o requisito 
